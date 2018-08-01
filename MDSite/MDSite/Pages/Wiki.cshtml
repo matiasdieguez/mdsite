@@ -1,0 +1,10 @@
+﻿@page
+@model WikiModel
+<div class="row">
+    <br />
+    @foreach (var item in @Model.WikiPageFiles)
+    {
+        <a href="/WikiPage?path=@item.Path">@item.Name</a>
+        <br />
+    }
+</div>

@@ -1,4 +1,5 @@
-﻿# Data Transfer Object
+﻿
+# Data Transfer Object
 
 This pattern is used to pass information decoupling the data objects from the Domain Model Entities
 
@@ -41,9 +42,10 @@ public class UserDto
 - You can use a LINQ Select projection to fill the DTO from a EntityFramework's DbContext query
 
 ```csharp
-var userDtoList = context.Users.Select(u=> new UserDto { Id = u.Id, 
-														 Name = string.Format("{0},{1}", u.LastName, u.FirstName), 
-														 Email = u.Email }).ToList();
+var userDtoList = context.Users.Select(u=> 
+new UserDto { Id = u.Id, 
+              Name = string.Format("{0},{1}", u.LastName, u.FirstName), 
+              Email = u.Email }).ToList();
 ```
 
 - You can use AutoMapper or similar libraries but you must take care of mappings definitions, complete lifecycle and reutilization. It's better to keep it simple with LINQ.

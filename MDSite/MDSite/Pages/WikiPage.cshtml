@@ -1,0 +1,8 @@
+﻿@page
+@model WikiPageModel
+<div class="row">
+    <br />
+    <markdown>
+        @Html.Raw(Model.MarkdownText)
+    </markdown>
+</div>
