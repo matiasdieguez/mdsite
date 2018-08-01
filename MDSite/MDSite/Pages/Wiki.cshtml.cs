@@ -21,7 +21,7 @@ namespace MDSite.Pages
             var path = ((IHostingEnvironment)HttpContext.RequestServices.GetService(typeof(IHostingEnvironment))).ContentRootPath;
             foreach (var file in Directory.GetFiles(path + "\\wwwroot\\wiki", "*.md"))
             {
-                var lastIndex = file.LastIndexOf("wiki") + 4;
+                var lastIndex = file.LastIndexOf("wiki") + 5;
                 var name = file.Substring(lastIndex, file.Length - lastIndex);
                 list.Add(new WikiFile { Path = file, Name = name });
             }
