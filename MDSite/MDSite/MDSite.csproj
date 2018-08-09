@@ -10,6 +10,6 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="wwwroot\wiki\Data-Transfer-Object-Pattern.md" />
+    <None Include="wwwroot\docs\Data-Transfer-Object-Pattern.md" />
   </ItemGroup>
 </Project>

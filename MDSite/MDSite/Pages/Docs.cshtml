@@ -1,12 +1,12 @@
 ﻿@page
-@model WikiModel
+@model DocsModel
 <div class="row">
     <br />
     <h1>Wiki Index</h1>
     <br />
-    @foreach (var item in @Model.WikiPageFiles)
+    @foreach (var item in @Model.DocsPageFiles)
     {
-        <a href="/WikiPage?path=@item.Name">@item.Name</a>
+        <a href="/DocsPage?path=@item.Name">@item.Name</a>
         <br />
     }
     <br />

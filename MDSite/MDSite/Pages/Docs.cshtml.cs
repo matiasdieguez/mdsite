@@ -5,28 +5,28 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MDSite.Pages
 {
-    public class WikiFile
+    public class DocsFile
     {
         public string Path { get; set; }
         public string Name { get; set; }
     }
 
-    public class WikiModel : PageModel
+    public class DocsModel : PageModel
     {
-        public List<WikiFile> WikiPageFiles { get; set; }
+        public List<DocsFile> DocsPageFiles { get; set; }
         public void OnGet()
         {
-            var list = new List<WikiFile>();
+            var list = new List<DocsFile>();
 
             var path = ((IHostingEnvironment)HttpContext.RequestServices.GetService(typeof(IHostingEnvironment))).ContentRootPath;
-            foreach (var file in Directory.GetFiles(path + "\\wwwroot\\wiki", "*.md"))
+            foreach (var file in Directory.GetFiles(path + "\\wwwroot\\docs", "*.md"))
             {
-                var lastIndex = file.LastIndexOf("wiki") + 5;
+                var lastIndex = file.LastIndexOf("docs") + 5;
                 var name = file.Substring(lastIndex, file.Length - lastIndex);
-                list.Add(new WikiFile { Path = file, Name = name });
+                list.Add(new DocsFile { Path = file, Name = name });
             }
 
-            WikiPageFiles = list;
+            DocsPageFiles = list;
         }
     }
 }
