@@ -49,3 +49,20 @@ new UserDto { Id = u.Id,
 ```
 
 - You can use AutoMapper or similar libraries but you must take care of mappings definitions, complete lifecycle and reutilization. It's better to keep it simple with LINQ.
+
+ ## Add Read Only properties
+ 
+- You can add read only properties to perform operations between other fields, calculations, etc..
+
+For example, the DisplayName property in the following DTO
+
+```csharp
+public class UserDto
+{
+	public int Id { get; set; }
+	public string FirstName { get; set; }
+	public string LastName { get; set; }
+	public string DisplayName { get { return string.Format("{0},{1}", LastName, FirstName); } }
+	public string Email { get; set; }
+}
+```
