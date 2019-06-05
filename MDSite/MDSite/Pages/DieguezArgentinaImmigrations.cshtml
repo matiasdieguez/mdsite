@@ -1,0 +1,61 @@
+@page
+@model DieguezArgentinaImmigrationsModel
+<div class="row">
+    <div class="center-block text-center">
+        <img src="~/images/dieguez.png" class="img-circle" alt="Dieguez">
+        <h2>Dieguez Immigration List from Argentina's <a href="https://cemla.com/buscador/" target="_blank">CEMLA records</a></h2>
+        <br />
+        <a id="showHelp" onclick="showHelp();">Show ordering and filtering instructions</a>
+        <div id="help" style="display:none">
+            <br />
+            <p>Click the icon on the header to filter</p>
+            <img src="~/images/filter.png" alt="Dieguez">
+            <br />
+            <br />
+            <p>Click the header name to change the order direction</p>
+            <img src="~/images/order.png" alt="Dieguez">
+        </div>
+    </div>
+</div>
+<br />
+@(Html
+    .Grid(Model.DieguezImmigrations)
+    .Build(columns =>
+    {
+        columns.Add(model => model.Apellido).Titled("Apellido");
+        columns.Add(model => model.Nombre).Titled("Nombre");
+        columns.Add(model => model.Edad).Titled("Edad");
+        columns.Add(model => model.EstadoCivil).Titled("EstadoCivil");
+        columns.Add(model => model.Nacionalidad).Titled("Nacionalidad");
+        columns.Add(model => model.LugarDeNacimiento).Titled("LugarDeNacimiento");
+        columns.Add(model => model.Profesion).Titled("Profesion");
+        columns.Add(model => model.FechaDeArribo).Titled("Fecha de Arribo").Formatted("{0:d}");
+        columns.Add(model => model.Barco).Titled("Barco");
+        columns.Add(model => model.Puerto).Titled("Puerto");
+    })
+    .Empty("No data found")
+    .Filterable()
+    .Sortable()
+)
+
+@section Scripts
+{
+    <script>
+        function showHelp()
+        {
+            var help = document.getElementById("help");
+            var show = document.getElementById("showHelp");
+
+            if(help.style.display == 'none')
+            {
+                help.style.display = 'block';
+                show.innerText = "Hide ordering and filtering instructions";
+            }
+            else
+            {
+                help.style.display = 'none';
+                show.innerText = "Show ordering and filtering instructions";
+            }
+        }
+    </script>
+}
