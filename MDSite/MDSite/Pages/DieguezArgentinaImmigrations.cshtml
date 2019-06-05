@@ -9,11 +9,11 @@
         <div id="help" style="display:none">
             <br />
             <p>Click the icon on the header to filter</p>
-            <img src="~/images/filter.png" alt="Dieguez">
+            <img src="~/images/filter.png" alt="Filtering instructions">
             <br />
             <br />
             <p>Click the header name to change the order direction</p>
-            <img src="~/images/order.png" alt="Dieguez">
+            <img src="~/images/order.png" alt="Ordering instructions">
         </div>
     </div>
 </div>
@@ -25,11 +25,11 @@
         columns.Add(model => model.Apellido).Titled("Apellido");
         columns.Add(model => model.Nombre).Titled("Nombre");
         columns.Add(model => model.Edad).Titled("Edad");
-        columns.Add(model => model.EstadoCivil).Titled("EstadoCivil");
+        columns.Add(model => model.EstadoCivil).Titled("Estado civil");
         columns.Add(model => model.Nacionalidad).Titled("Nacionalidad");
-        columns.Add(model => model.LugarDeNacimiento).Titled("LugarDeNacimiento");
+        columns.Add(model => model.LugarDeNacimiento).Titled("Lugar de nacimiento");
         columns.Add(model => model.Profesion).Titled("Profesion");
-        columns.Add(model => model.FechaDeArribo).Titled("Fecha de Arribo").Formatted("{0:d}");
+        columns.Add(model => model.FechaDeArribo).Titled("Fecha de arribo");
         columns.Add(model => model.Barco).Titled("Barco");
         columns.Add(model => model.Puerto).Titled("Puerto");
     })
