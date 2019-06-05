@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    color: #cccccc;
+}
+
+.img-album {
+    width: 300px;
+    height: 300px;
+}
+
+a {
+    color: red;
+}
+
+hr{
+    display: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #cccccc;
+}
+
+.navbar-default .navbar-brand {
+    color: red;
+}
+
+.navbar-default {
+    background-color: black;
+    border-color: black;
+}
