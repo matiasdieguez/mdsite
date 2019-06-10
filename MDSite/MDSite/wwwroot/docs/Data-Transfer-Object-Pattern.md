@@ -1,5 +1,5 @@
 ﻿
-## Data Transfer Object
+# Data Transfer Object
 
 This pattern is used to pass information decoupling the data objects from the Domain Model Entities
 
@@ -66,3 +66,11 @@ public class UserDto
 	public string Email { get; set; }
 }
 ```
+## Recommendations
+
+- The name must be in the singular
+- It must be in PascalCase
+- Must have the suffix Dto at the end of the name
+- The fields must be represented as public properties
+- If certain DTOs have a complex structure, try to simplify them, generate new DTOs, avoid generating loops of entities (one within another) and try to limit the transport of very heavy objects such as collections that have many items
+- If a modification requires altering a DTO that is used in several service operations, create a new DTO that reflects the functionality and leave the previous one unchanged to maintain compatibility, especially if an existing property is deleted or modified, if you are not going to refactor all related operations
