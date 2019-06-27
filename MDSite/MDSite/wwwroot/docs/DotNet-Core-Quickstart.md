@@ -44,3 +44,20 @@ App execution
 ```
 dotnet run 
 ```
+
+## .NET CLI project creation
+.NET Standard Library
+```
+dotnet new classlib
+```
+
+ASP.NET Core Web API
+```
+dotnet new webapi
+```
+
+ASP.NET Core MVC Web App
+```
+dotnet new mvc
+```
+

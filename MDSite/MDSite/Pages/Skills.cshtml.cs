@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MDSite.Pages
 {
-    public class TechnologiesModel : PageModel
+    public class SkillsModel : PageModel
     {
         public string Message { get; set; }
 

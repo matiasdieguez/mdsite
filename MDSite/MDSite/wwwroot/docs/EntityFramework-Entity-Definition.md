@@ -130,7 +130,7 @@ protected override void OnModelCreating (ModelBuilder modelBuilder)
     });
 // remaining code omitted
 ```
-### Example of Entity with Indices
+### Example of Entity with Index
 
 Adding an index
 ```csharp
