@@ -27,3 +27,13 @@ body {
 .img-responsive {
     margin: 0 auto;
 }
+
+.navbar-default {
+    background-color: white;
+    border-color: white;
+    height: 100px;
+    display: block;
+    margin-bottom: 0;
+    position: static;
+    min-height: 100px !important;
+}
