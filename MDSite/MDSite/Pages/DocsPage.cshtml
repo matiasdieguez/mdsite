@@ -2,7 +2,5 @@
 @model DocsPageModel
 <div class="row">
     <br />
-    <markdown>
-        @Html.Raw(Model.MarkdownText)
-    </markdown>
+    @Html.Raw(Model.MarkdownText)
 </div>
