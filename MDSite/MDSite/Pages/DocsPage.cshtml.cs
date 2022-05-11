@@ -1,5 +1,4 @@
 ﻿using Markdig;
-using Markdig.SyntaxHighlighting;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -17,12 +16,11 @@ namespace MDSite.Pages
                 return;
             }
 
-            var path = ((IHostingEnvironment)HttpContext.RequestServices.GetService(typeof(IHostingEnvironment))).ContentRootPath;
+            var path = ((IWebHostEnvironment)HttpContext.RequestServices.GetService(typeof(IWebHostEnvironment))).ContentRootPath;
             var text = System.IO.File.ReadAllText(path + "\\wwwroot\\docs\\" + file);
 
             var pipeline = new MarkdownPipelineBuilder()
                                 .UseAdvancedExtensions()
-                                .UseSyntaxHighlighting()
                                 .UseAutoLinks()
                                 .UseEmojiAndSmiley()
                                 .Build();

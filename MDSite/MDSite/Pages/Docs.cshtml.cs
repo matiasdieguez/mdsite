@@ -18,7 +18,7 @@ namespace MDSite.Pages
         {
             var list = new List<DocsFile>();
 
-            var path = ((IHostingEnvironment)HttpContext.RequestServices.GetService(typeof(IHostingEnvironment))).ContentRootPath;
+            var path = ((IWebHostEnvironment)HttpContext.RequestServices.GetService(typeof(IWebHostEnvironment))).ContentRootPath;
             foreach (var file in Directory.GetFiles(path + "\\wwwroot\\docs", "*.md"))
             {
                 var lastIndex = file.LastIndexOf("docs") + 5;
