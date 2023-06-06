@@ -13,12 +13,17 @@
   To configure Developer Certificate for running local websites with HTTPS, execute:
 
   ```
-   dotnet dev-certs https --trust
+  dotnet dev-certs https --trust
   ```
 
 - Install VS Code [https://code.visualstudio.com/](https://code.visualstudio.com/)
 - Install VS Code "C# OmniSharp" VS Code Extension
 - Install VS Code "MSSQL" VS Code Extension
+- Install Entity Framework Tools
+  ```
+   dotnet tool install --global dotnet-ef
+  ```
+
 
 ## VS Code most common commands
 
