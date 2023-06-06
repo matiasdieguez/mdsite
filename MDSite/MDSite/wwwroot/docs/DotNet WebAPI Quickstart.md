@@ -197,71 +197,9 @@ dotnet publish
     {
         public class DummyDto
         {
-            public int Id { get; set; }
             public string Content { get; set; }
         }
     }
-    ```
-### Add Map to convert DTO to Model class and vice-versa
-- Add DummyMaps.cs class to /Api/Maps
-    ```csharp
-    using ProjectName.Api.Models;
-
-    namespace ProjectName.Api.Maps
-    {
-        public static class DummyMaps
-        {
-            public static DummyDto ToDto(this Dummy model)
-            {
-                return new DummyDto()
-                {
-                    Id = model.Id,
-                    Content = model.Content
-                };
-            }
-
-            public static Dummy FromDto(this DummyDto dto)
-            {
-                return new Dummy()
-                {
-                    Id = dto.Id,
-                    Content = dto.Content
-                };
-            }
-
-            public static List<DummyDto> ToDto(this List<Dummy> model)
-            {
-                var list = model.Select(c => c.ToDto()).ToList();
-                return list;
-            }
-
-            public static List<Dummy> FromDto(this List<DummyDto> dto)
-            {
-                var list = dto.Select(c => c.FromDto()).ToList();
-                return list;
-            }
-        }
-    }    
-    ```
-### Add Validations
-- Add DummyValidator.cs class to /Api/Validators
-    ```csharp
-    using System.Text.RegularExpressions;
-    using ProjectName.Api.Dto;
-    using FluentValidation;
-
-    namespace ProjectName.Api.Validations
-    {
-        public class DummyValidator : AbstractValidator<DummyDto>
-        {
-            public DummyValidator()
-            {
-                RuleFor(item => item.Content)
-                    .NotEmpty()
-                    .WithMessage(Resources.Required);
-            }
-        }    
-    }    
     ```
 
 ### Add Controller
@@ -283,7 +221,7 @@ dotnet publish
         private readonly ILogger<DummyController> _logger;
         private readonly IConfiguration _config;
 
-        public DummyController(ILogger<DummyController> logger, ProjectNmaeDataContext context, IConfiguration config)
+        public DummyController(ILogger<DummyController> logger, ProjectNameDataContext context, IConfiguration config)
         {
             _logger = logger;
             _context = context;
@@ -293,7 +231,7 @@ dotnet publish
         [HttpPost]
         public async Task<ActionResult<DummyDto>> Create(DummyDto request)
         {
-            var dummy = request.FromDto();
+            var dummy = new Dummy { Content = request.Content }
             _context.Dummies.Add(dummy);
             await _context.SaveChangesAsync();
 
