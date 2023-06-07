@@ -37,7 +37,6 @@
 <form asp-controller="Home" asp-action="Login" method="post">
         <input type="text" class="form-control" id="Username" name="Username" placeholder="@Localizer.Get(Resources.AppLoginUsername)" />
         <span asp-validation-for="Username" class="text-danger"></span>
-
         <input type="submit" value="Login"/>
 </form>
 

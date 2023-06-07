@@ -72,8 +72,8 @@ Edit the class that inherits from DbContext that is in /ProjectName.Api/Model/Co
 To make this configuration, a property with the id of the relation (ex .: CountryId in Province) and another with the object of the entity of the relation (ex .: Country in Province) marked with the attribute must be created in the dependent entity. [ForeignKey], which should receive as parameter the name of the relationship id property (ex .: [ForeignKey ("CountryId")])
 
 > ProjectName.Api / Models / Entities / Country.cs
-```csharp
-using using System.ComponentModel.DataAnnotations;
+```cshsarp
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectName.Api.Model.Entities
 {

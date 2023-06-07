@@ -204,41 +204,43 @@ dotnet publish
 
 ### Add Controller
 - Add DummyController.cs class to /Api/Controllers
+    
     ```csharp
     using ProjectName.Api.Maps;
     using ProjectName.Api.Models;
     using ProjectName.Api.Filters;
     using Microsoft.AspNetCore.Mvc;
 
-    namespace ProjectName.Api.Controllers;
+    namespace ProjectName.Api.Controllers; 
 
     [ApiController]
     [Route("[controller]")]
     [RequireApiKey]
     public class DummyController : ControllerBase
     {
-        public readonly ProjectNameDataContext _context;
-        private readonly ILogger<DummyController> _logger;
-        private readonly IConfiguration _config;
 
-        public DummyController(ILogger<DummyController> logger, ProjectNameDataContext context, IConfiguration config)
-        {
-            _logger = logger;
-            _context = context;
-            _config = config;
-        }
+       public readonly ProjectNameDataContext _context;
+       private readonly ILogger<DummyController> _logger;
+       private readonly IConfiguration _config;
 
-        [HttpPost]
-        public async Task<ActionResult<DummyDto>> Create(DummyDto request)
-        {
-            var dummy = new Dummy { Content = request.Content }
-            _context.Dummies.Add(dummy);
-            await _context.SaveChangesAsync();
+       public DummyController(ILogger<DummyController> logger, ProjectNameDataContext context, IConfiguration config)
+       {
+           _logger = logger;
+           _context = context;
+           _config = config;
+       }
 
-            return CreatedAtAction(nameof(Create), dummy.ToDto());
-        }
+       [HttpPost]
+       public async Task<ActionResult<DummyDto>> Create(DummyDto request)
+       {
+           var dummy = new Dummy { Content = request.Content }
+           _context.Dummies.Add(dummy);
+           await _context.SaveChangesAsync();
+           return CreatedAtAction(nameof(Create), dummy.ToDto());
+       }
 
     }    
     ```
+
 ### Test endpoints
 - Go to https://localhost:(yourProjectPort)/swagger to browse all controllers's endpoints and test them manually

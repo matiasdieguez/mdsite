@@ -8,10 +8,11 @@
 
 - Positioning in the terminal or command line within the API project, eg:
 
-`` `
+```
 cd /ProjectName.Api
+
 dotnet ef migrations add AddLanguageSupport
-`` `
+```
 
 - In the case of adding a relation that EF is creating as CASCADE ON DELETE, verify the migration file and modify the entity .OnDelete (DeleteBehavior.Cascade) method by .OnDelete (DeleteBehavior.Restrict)
 
@@ -21,7 +22,8 @@ dotnet ef migrations add AddLanguageSupport
 
 - The command below will impact the structure in the DB according to the existing migrations in the ProjectName.Api project
 
-`` `
+```
 cd /ProjectName.Api
+
 dotnet ef database update
-`` `
+```
