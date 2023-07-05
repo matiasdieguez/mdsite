@@ -1,9 +1,7 @@
 ﻿@page
 @model DocsModel
-<div class="row">
-    <br />
-    <h1>Docs Index</h1>
-    <br />
+<div>
+    <h1>Docs, Courses & Resources</h1>
     @foreach (var item in @Model.DocsPageFiles)
     {
         <a href="/DocsPage?path=@item.Name">@item.Name</a>

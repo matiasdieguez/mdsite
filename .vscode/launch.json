@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/MDSite/MDSite/bin/Debug/netcoreapp2.0/MDSite.dll",
+            "program": "${workspaceFolder}/MDSite/MDSite/bin/Debug/net6.0/MDSite.dll",
             "args": [],
             "cwd": "${workspaceFolder}/MDSite/MDSite",
             "stopAtEntry": false,
