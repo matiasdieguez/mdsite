@@ -2,10 +2,10 @@
 
 ## Temario
 
-   * 00 - [Objetivos del curso](curso/00-Introducci%C3%B3n%20a%20la%20programaci%C3%B3n.pptx)
-   * 01 - [Introducción a la lógica](curso/01-Introducci%C3%B3n%20a%20la%20l%C3%B3gica.pptx)
-   * 02 - [Introducción a las computadoras](curso/02-Introducci%C3%B3n%20a%20las%20computadoras.pptx)
-   * 03 - [Introducción a las redes](curso/03-Introducci%C3%B3n%20a%20las%20redes.pptx)
+   * 00 - [Objetivos del curso](docs/curso/00-Introducci%C3%B3n%20a%20la%20programaci%C3%B3n.pptx)
+   * 01 - [Introducción a la lógica](docs/curso/01-Introducci%C3%B3n%20a%20la%20l%C3%B3gica.pptx)
+   * 02 - [Introducción a las computadoras](docs/curso/02-Introducci%C3%B3n%20a%20las%20computadoras.pptx)
+   * 03 - [Introducción a las redes](docs/curso/03-Introducci%C3%B3n%20a%20las%20redes.pptx)
    * 04 - Introducción a la Programación Secuencial
    * 05 - Introducción a la Programación Orientada a Objetos
    * 06 - Introducción a las Bases de Datos Relacionales
