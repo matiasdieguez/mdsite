@@ -30,6 +30,6 @@
 
    ### Aprendizaje basado en un stack tecnológico
    * [.NET - Download](https://dotnet.microsoft.com/en-us/download)
-   * [C# - Guía básica de programación](curso/CSharp%20-%20Gu%C3%ADa%20b%C3%A1sica%20de%20programaci%C3%B3n.pdf)
+   * [C# - Guía básica de programación](docs/curso/CSharp%20-%20Gu%C3%ADa%20b%C3%A1sica%20de%20programaci%C3%B3n.pdf)
 
    
