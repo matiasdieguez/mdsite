@@ -212,21 +212,22 @@ dotnet add reference ..\Dto\ProjectName.Dto.csproj
 - Add Models directory to Api
 
 - Add ProjectNameDbContext.cs in Models directory
-```
+
+
+<pre>
 using Microsoft.EntityFrameworkCore;
 
 namespace ProjectName.Api.Models
 {
-    public class ProjectNameDbContext : DbContext
-    {
-        public ProjectNameDbContext(DbContextOptions<ProjectNameDbContext> context) : base(context)
-        {
+&nbsp;&nbsp;public class ProjectNameDbContext : DbContext
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;public ProjectNameDbContext(DbContextOptions<ProjectNameDbContext> context) : base(context)
+&nbsp;&nbsp;&nbsp;{
 
-        }
-    }
+&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;}
 }
-```
-
+</pre>
 
 - Add EF service to program.cs
 
@@ -288,14 +289,14 @@ builder.Services.AddDbContext<ProjectNameDbContext>(options =>
     ```
 ### Add Map to convert DTO to Model class and vice-versa
 - Add DummyMaps.cs class to /Api/Maps
-    ```csharp
+    <pre>
     using ProjectName.Api.Models;
 
     namespace ProjectName.Api.Maps
     {
-        public static class DummyMaps
-        {
-            public static DummyDto ToDto(this Dummy model)
+    &nbsp;public static class DummyMaps
+    &nbsp;{
+    &nbsp;&nbsp;public static DummyDto ToDto(this Dummy model)
             {
                 return new DummyDto()
                 {
@@ -326,27 +327,27 @@ builder.Services.AddDbContext<ProjectNameDbContext>(options =>
             }
         }
     }    
-    ```
+    </pre>
 ### Add Validations
 - Add DummyValidator.cs class to /Api/Validators
-    ```csharp
+    <pre>
     using System.Text.RegularExpressions;
     using ProjectName.Api.Dto;
     using FluentValidation;
 
     namespace ProjectName.Api.Validations
     {
-        public class DummyValidator : AbstractValidator<DummyDto>
-        {
-            public DummyValidator()
-            {
-                RuleFor(item => item.Content)
-                    .NotEmpty()
-                    .WithMessage(Resources.Required);
-            }
-        }    
+        &nbsp;public class DummyValidator : AbstractValidator<DummyDto>
+        &nbsp;{
+            &nbsp;&nbsp;&nbsp;public DummyValidator()
+            &nbsp;&nbsp;&nbsp;{
+            &nbsp;&nbsp;&nbsp;    RuleFor(item => item.Content)
+            &nbsp;&nbsp;&nbsp;        .NotEmpty()
+            &nbsp;&nbsp;&nbsp;        .WithMessage(Resources.Required);
+            &nbsp;&nbsp;&nbsp;}
+        &nbsp;}    
     }    
-    ```
+    </pre>
 
 ### Add Controller
 - Add DummyController.cs class to /Api/Controllers

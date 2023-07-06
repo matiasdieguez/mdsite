@@ -4,7 +4,14 @@
     <h1>Docs, Courses & Resources</h1>
     @foreach (var item in @Model.DocsPageFiles)
     {
-        <a href="/DocsPage?path=@item.Name">@item.Name</a>
+        var category = item.Name.Split('-')[0];
+        if(!Model.Categories[category])
+        {
+            <h3>@category</h3>
+
+            Model.Categories[category] = true;
+        }
+        <a href="/docspage?path=@item.Name">@item.Name.Replace('-',' ').Replace(".md", string.Empty)</a>
         <br />
     }
 </div>
