@@ -6,15 +6,16 @@
    * 01 - [Introducción a la lógica](docs/curso/01-Introducci%C3%B3n%20a%20la%20l%C3%B3gica.pptx)
    * 02 - [Introducción a las computadoras](docs/curso/02-Introducci%C3%B3n%20a%20las%20computadoras.pptx)
    * 03 - [Introducción a las redes](docs/curso/03-Introducci%C3%B3n%20a%20las%20redes.pptx)
-   * 04 - Introducción a la Programación Secuencial
-   * 05 - Introducción a la Programación Orientada a Objetos
-   * 06 - Introducción a las Bases de Datos Relacionales
-   * 07 - Introducción a la Programación en .NET
-   * 08 - Introducción a la Programación en Backend
-   * 09 - Introducción a la Programación en IoT
-   * 10 - Introducción a la Programación en Frontend
-   * 11 - Introducción a Git
-   * 12 - Introducción a DevOps
+   * 04 - [Introducción a la Programación en .NET](docs/curso/CSharp%20-%20Gu%C3%ADa%20b%C3%A1sica%20de%20programaci%C3%B3n.pdf)
+   * 05 - [Práctica C# 1 - Primer código](https://learn.microsoft.com/es-es/training/paths/get-started-c-sharp-part-1/)
+   * 06 - [Práctica C# 2 - Aplicaciones de consola](https://learn.microsoft.com/es-es/training/paths/get-started-c-sharp-part-2/)
+   * 07 - [Práctica C# 3 - Adición de lógica](https://learn.microsoft.com/es-es/training/paths/get-started-c-sharp-part-3/)
+   * 08 - Introducción a las Bases de Datos Relacionales
+   * 09 - Introducción a la Programación en Backend
+   * 10 - Introducción a la Programación en IoT
+   * 11 - Introducción a la Programación en Frontend
+   * 12 - Introducción a Git
+   * 13 - Introducción a DevOps
 
 ## Recursos
 
