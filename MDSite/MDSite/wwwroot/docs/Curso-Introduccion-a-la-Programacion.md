@@ -10,12 +10,13 @@
    * 05 - [Práctica C# 1 - Primer código](https://learn.microsoft.com/es-es/training/paths/get-started-c-sharp-part-1/)
    * 06 - [Práctica C# 2 - Aplicaciones de consola](https://learn.microsoft.com/es-es/training/paths/get-started-c-sharp-part-2/)
    * 07 - [Práctica C# 3 - Adición de lógica](https://learn.microsoft.com/es-es/training/paths/get-started-c-sharp-part-3/)
-   * 08 - Introducción a las Bases de Datos Relacionales
-   * 09 - Introducción a la Programación en Backend
-   * 10 - Introducción a la Programación en IoT
-   * 11 - Introducción a la Programación en Frontend
-   * 12 - Introducción a Git
-   * 13 - Introducción a DevOps
+   * 08 - [Primer Proyecto](docs/curso/TestProject1.zip)
+   * 09 - Introducción a las Bases de Datos Relacionales
+   * 10 - Introducción a la Programación en Backend
+   * 11 - Introducción a la Programación en IoT
+   * 12 - Introducción a la Programación en Frontend
+   * 13 - Introducción a Git
+   * 14 - Introducción a DevOps
 
 ## Recursos
 
