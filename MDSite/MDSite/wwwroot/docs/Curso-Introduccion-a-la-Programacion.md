@@ -17,6 +17,9 @@
    * 12 - Introducción a la Programación en Frontend
    * 13 - Introducción a Git
    * 14 - Introducción a DevOps
+   * 15 - [Ejemplo de proyecto OOP en C#](docs/curso/LogSample.zip)
+   * 16 - [Ejemplo de proyecto de API en C# ASP.NET WebAPI](docs/curso/ProductStore.zip) 
+   * 17 - [Ejemplo de proyecto de Frontend en HTML, CSS y Typescript](docs/curso/ProductStoreFull.zip) 
 
 ## Recursos
 
