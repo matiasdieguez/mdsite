@@ -4,7 +4,7 @@ body {
 }
 
 a {
-    color: red;
+    color: rgb(200, 10, 10);
 }
 
 /* Wrapping element */
@@ -14,6 +14,9 @@ a {
     padding-right: 15px;
 }
 
+h2 {
+    font-size: x-larged;
+}
 /* QR code generator */
 #qrCode {
     margin: 15px;
@@ -40,5 +43,5 @@ a {
 }
 
 .navbar-default .navbar-brand {
-    color: red;
+    color:rgb(200, 10, 10);
 }
