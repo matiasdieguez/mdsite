@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Reflection
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -37,7 +38,8 @@
         @RenderBody()
         <br/>
         <footer>
-            <p class="center-block text-center">&copy; @DateTime.Now.Year.ToString() - Matías Dieguez</p>
+            @{ var version = Assembly.GetEntryAssembly()?.GetCustomAttribute<AssemblyFileVersionAttribute>().Version; }
+            <p class="center-block text-center">v @version &copy; @DateTime.Now.Year.ToString() - Matías Dieguez</p>
         </footer>
     </div>
 

@@ -3,8 +3,13 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="GitVersion.MsBuild" Version="6.0.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="markdig" Version="0.30.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="NonFactors.Grid.Mvc6" Version="4.1.2" />
   </ItemGroup>
+  <Import Project="packages\GitVersion.MsBuild\build\GitVersion.MsBuild.targets" Condition="Exists('packages\GitVersion.MsBuild\build\GitVersion.MsBuild.targets')" />
 </Project>
